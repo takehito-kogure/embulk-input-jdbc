@@ -7,6 +7,12 @@ JDBC input plugins for Embulk loads records to databases using JDBC drivers.
 - embulk-input-jdbc 0.10 requires Java 8 or later (no longer supports Java 7), and requires embulk 0.9 or later.
 - The default embulk type for MySQL JSON type was changed from `string` to `json` since embulk-input-jdbc 0.10 .
 
+# Common build method
+1. Open folder in VSCode.
+2. Reopen in container.
+3. Choose Gradle feature in side menu.
+4. Run build command in target project.
+
 ## MySQL
 
 See [embulk-input-mysql](embulk-input-mysql/).
