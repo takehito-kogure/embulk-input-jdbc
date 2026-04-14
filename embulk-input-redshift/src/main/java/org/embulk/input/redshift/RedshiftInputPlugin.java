@@ -18,7 +18,7 @@ import org.embulk.util.config.ConfigDefault;
 public class RedshiftInputPlugin
         extends AbstractJdbcInputPlugin
 {
-    private static final Driver driver = new org.postgresql.Driver();
+    private static final Driver driver = new com.amazon.redshift.jdbc42.Driver();
 
     public interface RedshiftPluginTask
             extends PluginTask

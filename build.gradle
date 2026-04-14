@@ -8,7 +8,7 @@ plugins {
 
 allprojects {
     group = "org.embulk"
-    version = "0.14.0"
+    version = "0.15.0"
     description = "Selects records from a table."
 }
 
@@ -58,10 +58,10 @@ subprojects {
 
         // They are once excluded from transitive dependencies of other dependencies,
         // and added explicitly with versions exactly the same with older embulk-core (until 0.10.31).
-        implementation "com.fasterxml.jackson.core:jackson-annotations:2.6.7"
-        implementation "com.fasterxml.jackson.core:jackson-core:2.6.7"
-        implementation "com.fasterxml.jackson.core:jackson-databind:2.6.7.5"
-        implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.6.7"
+        implementation "com.fasterxml.jackson.core:jackson-annotations:2.21"
+        implementation "com.fasterxml.jackson.core:jackson-core:2.21.2"
+        implementation "com.fasterxml.jackson.core:jackson-databind:2.21.2"
+        implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.21.2"
         implementation "javax.validation:validation-api:1.1.0.Final"
 
         implementation "org.embulk:embulk-util-json:0.3.0"

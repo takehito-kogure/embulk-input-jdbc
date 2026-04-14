@@ -1,7 +1,7 @@
 dependencies {
     implementation(project(path: ":embulk-input-jdbc", configuration: "runtimeElements"))
     implementation(project(path: ":embulk-input-postgresql", configuration: "runtimeElements"))
-    implementation "org.postgresql:postgresql:9.4-1205-jdbc41"
+    implementation "com.amazon.redshift:redshift-jdbc42:2.2.5"
 
     testImplementation project(":embulk-input-jdbc").sourceSets.test.output
 

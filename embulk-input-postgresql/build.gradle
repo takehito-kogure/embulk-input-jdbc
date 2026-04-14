@@ -1,8 +1,8 @@
 dependencies {
     implementation(project(path: ":embulk-input-jdbc", configuration: "runtimeElements"))
 
-    compileOnly "org.postgresql:postgresql:9.4-1205-jdbc41"
-    defaultJdbcDriver 'org.postgresql:postgresql:9.4-1205-jdbc41'
+    compileOnly "org.postgresql:postgresql:42.7.10"
+    defaultJdbcDriver 'org.postgresql:postgresql:42.7.10'
 
     testImplementation "com.google.guava:guava:18.0"
     testImplementation "org.embulk:embulk-formatter-csv:0.11.1"
@@ -10,7 +10,7 @@ dependencies {
     testImplementation "org.embulk:embulk-output-file:0.11.0"
     testImplementation "org.embulk:embulk-parser-csv:0.11.3"
 
-    testImplementation "org.postgresql:postgresql:9.4-1205-jdbc41"
+    testImplementation "org.postgresql:postgresql:42.7.10"
 }
 
 embulkPlugin {
@@ -18,7 +18,7 @@ embulkPlugin {
     category = "input"
     type = "postgresql"
     additionalDependencyDeclarations = [
-        [ groupId: "org.postgresql", artifactId: "postgresql", version: "9.4-1205-jdbc41", scope: "compile", optional: true ],
+        [ groupId: "org.postgresql", artifactId: "postgresql", version: "42.7.10", scope: "compile", optional: true ],
     ]
 }
 

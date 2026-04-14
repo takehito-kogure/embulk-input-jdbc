@@ -1,8 +1,8 @@
 dependencies {
     implementation(project(path: ":embulk-input-jdbc", configuration: "runtimeElements"))
 
-    compileOnly "mysql:mysql-connector-java:5.1.44"
-    defaultJdbcDriver 'mysql:mysql-connector-java:5.1.44'
+    compileOnly "com.mysql:mysql-connector-j:9.6.0"
+    defaultJdbcDriver 'com.mysql:mysql-connector-j:9.6.0'
 
     testImplementation "com.google.guava:guava:18.0"
     testImplementation "org.embulk:embulk-formatter-csv:0.11.1"
@@ -10,7 +10,7 @@ dependencies {
     testImplementation "org.embulk:embulk-output-file:0.11.0"
     testImplementation "org.embulk:embulk-parser-csv:0.11.3"
 
-    testImplementation "mysql:mysql-connector-java:5.1.44"
+    testImplementation "com.mysql:mysql-connector-j:9.6.0"
 }
 
 embulkPlugin {
@@ -18,7 +18,7 @@ embulkPlugin {
     category = "input"
     type = "mysql"
     additionalDependencyDeclarations = [
-        [ groupId: "mysql", artifactId: "mysql-connector-java", version: "5.1.44", scope: "compile", optional: true ],
+        [ groupId: "com.mysql", artifactId: "mysql-connector-j", version: "9.6.0", scope: "compile", optional: true ],
     ]
 }
 
